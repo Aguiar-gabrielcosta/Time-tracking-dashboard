@@ -3,7 +3,7 @@
 
 :root{
     --blue: hsl(246, 80%, 60%);
-    --light-red: hsl(15, 100%, 70%);
+    --light-orange: hsl(15, 100%, 70%);
     --soft-blue: hsl(195, 74%, 62%);
     --light-red: hsl(348, 100%, 68%);
     --lime-green: hsl(145, 58%, 55%);
@@ -34,26 +34,125 @@
 }
 
 body{
+    background-color: var(--pale-blue);
+}
+
+main{
     background-color: var(--very-dark-blue);
+    position: relative;
+    margin: auto;
+    max-width: var(--desktop-width);
+    min-width: var(--mobile-width);
+    max-height: 1500px;
+    min-height: 1024px;
 }
 
-footer{
-    margin: 50px 0px;    
+main > div.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1110px;
+    min-width: 330px;
+    max-height: 700px;
+    min-height: 520px;
 }
 
-footer > div{
+main > div.container > section{
+    border-radius: 15px;
+}
+
+main > div.container > section.main{
+    background-color: var(--dark-blue);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 15px;
+    max-width: 330px;
+    min-width: 250px;
+    max-height: 520px;
+    min-height: 200px;
+}
+
+div.profile{
+    background-color: var(--blue);
+    border-radius: 15px;
+}
+
+div.profile img{
+    border: 3px solid white;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+}
+
+button{
+    background-color: var(--dark-blue);
+    border: none;
+}
+
+.work, .play, .study, .exercise, .social, .self-care{
+    border-radius: 15px;
+    max-width: 330px;
+    min-width: 250px;
+    max-height: 245px;
+    min-height: 160px;
+}
+
+section.work{
+    background-color: var(--light-orange);
+}
+
+section.play{
+    background-color: var(--soft-blue);
+}
+
+section.study{
+    background-color: var(--light-red);
+}
+
+section.exercise{
+    background-color: var(--lime-green);
+}
+
+section.social{
+    background-color: var(--violet);
+}
+
+section.self-care{
+    background-color: var(--soft-orange);
+}
+
+.content{
+    background-color: var(--dark-blue);
+    margin-top: 40px;
+    border-radius: 15px;
+    padding: 20px;
+    max-height: 165px;
+    min-height: 80px;
+    height: 100%;
+}
+
+.attribution{
     font-size: 14px;
-    text-align: center;
     color: white;
+    padding: 30px 0px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
 }
 
-footer > div > a{
+.attribution > a{
     font-size: 14px;
     text-decoration: none;
     color: var(--soft-blue);
 }
 
-footer > div > a:hover{
+.attribution > a:hover{
     text-decoration: underline;
 }
 
