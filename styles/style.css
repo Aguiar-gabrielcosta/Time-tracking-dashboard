@@ -41,7 +41,6 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: var(--color-very-dark-blue);
     max-width: var(--desktop-width);
     min-width: var(--mobile-width);
@@ -56,13 +55,9 @@ main{
     grid-template-columns: repeat(auto-fill, 250px);
     grid-template-rows: 245px 245px;
     gap: 30px;
-    max-width: 1090px;
-    /* height: 100%; */
-    /* margin: auto; */
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
+    /* max-width: 1090px; */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 section{
@@ -114,12 +109,9 @@ section#self-care{
 .attribution {  
     font-size: 12px; 
     text-align: center;
-    padding: 75px;
-    /* position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -100%); */
+    padding: 75px 10px;
 }
+
 .attribution a { 
     color: var(--color-soft-blue);
     text-decoration: none;
