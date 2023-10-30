@@ -8,7 +8,7 @@
     --color-light-red: hsl(348, 100%, 68%);
     --color-lime-green: hsl(145, 58%, 55%);
     --color-violet: hsl(264, 64%, 52%);
-    --color-soft-orange: hsl(43, 84%, 65%);
+    --color-yellow: hsl(43, 84%, 65%);
     --color-very-dark-blue: hsl(226, 43%, 10%);
     --color-dark-blue: hsl(235, 46%, 20%);
     --color-desaturated-blue: hsl(235, 45%, 61%);
@@ -28,57 +28,79 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     color: white;
     font-family: var(--main-font);
 }
 
-/* Bigger than display color */
 body{
     background-color: var(--color-soft-blue);
+    width: 100%;
+    height: 100%;
 }
 
 main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     background-color: var(--color-very-dark-blue);
-    max-width: var(--desktop-width);
-    min-width: var(--mobile-width);
-    min-height: 1024px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
-.container{
+div.container{
     display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-template-rows: 245px 245px;
-    gap: 30px;
-    /* max-width: 1090px; */
-    margin-top: 30px;
-    margin-bottom: 30px;
+    gap: 25px;
+    margin: 20px;
 }
 
-section{
+div.container > section{
     border-radius: 15px;
 }
 
-.profile{
-    grid-row-start: 1;
-    grid-row-end: 3;
+section.profile{
     background-color: var(--color-dark-blue);
-    max-width: 325px;
-    min-width: 250px;
-    max-height: 520px;
-    min-height: 200px;
+    width: 330px;
+    height: 200px;
 }
 
-.activity{
-    max-width: 325px;
-    min-width: 250px;
-    max-height: 245px;
-    min-height: 160px;
+section.profile > div{
+    background-color: var(--color-blue);
+    border-radius: 15px;
+    height: 130px;
+    padding: 10px;
+}
+
+section.profile > div > img{
+    display: block;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+section.profile > div > h1, p{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+section.profile > div > h1{
+    font-weight: var(--font-weight-light);
+    font-size: 1em;
+    margin: 30px 0px 0px 20px;
+}
+
+section.profile > div > p{
+    font-weight: var(--font-weight-normal);
+    font-size: 1.4em;
+    margin: 5px 0px 0px 20px;
+}
+
+section.activity{
+    width: 330px;
+    height: 160px;
 }
 
 section#work{
@@ -102,22 +124,22 @@ section#social{
 }
 
 section#self-care{
-    background-color: var(--color-soft-orange);
+    background-color: var(--color-yellow);
 }
 
 /* Footer config */
-.attribution {  
+div.attribution {
+    margin: 50px 0px;
     font-size: 12px; 
     text-align: center;
-    padding: 75px 10px;
 }
 
-.attribution a { 
+div.attribution a { 
     color: var(--color-soft-blue);
     text-decoration: none;
 }
 
-.attribution a:hover{
+div.attribution a:hover{
     text-decoration: underline;
 }
 
