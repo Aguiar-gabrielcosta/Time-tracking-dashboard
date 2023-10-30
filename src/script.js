@@ -5,8 +5,7 @@ document.getElementById("weekly").addEventListener('click', weeklyHours)
 document.getElementById("monthly").addEventListener('click', monthlyHours)
 
 function dailyHours(){
-    console.log(`uhu!`);
-    getData()
+    
 }
 
 function weeklyHours(){

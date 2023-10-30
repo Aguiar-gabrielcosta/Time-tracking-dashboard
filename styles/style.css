@@ -98,6 +98,28 @@ section.profile > div > p{
     margin: 5px 0px 0px 20px;
 }
 
+section.profile > nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+}
+
+section.profile > nav > input{
+    display: none;
+}
+
+section.profile > nav > label{
+    color: var(--color-desaturated-blue);
+    font-size: 1.1em;
+}
+
+section.profile > nav > input:checked + label, input:hover + label{
+    color: white;
+}
+
 section.activity{
     width: 330px;
     height: 160px;
