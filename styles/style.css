@@ -114,39 +114,80 @@ section.profile > nav > input{
 section.profile > nav > label{
     color: var(--color-desaturated-blue);
     font-size: 1.1em;
+    cursor: pointer;
 }
 
-section.profile > nav > input:checked + label, input:hover + label{
+section.profile > nav > input:checked + label, input:hover + label:hover{
     color: white;
 }
 
 section.activity{
+    display: flex;
+    align-items: end;
     width: 330px;
     height: 160px;
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+}
+
+section.activity > div.content{
+    background-color: var(--color-dark-blue);
+    border-radius: 15px;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+section.activity > div.content:hover{
+    background-color: var(--color-desaturated-blue);
+}
+
+section.activity > div.content > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+section.activity > div.content > button:hover > svg > path{
+    fill: #ffffff;
 }
 
 section#work{
     background-color: var(--color-light-orange);
+    background-image: url(../images/icon-work.svg);
+    background-position-y: -10px;
 }
 
 section#play{
     background-color: var(--color-soft-blue);
+    background-image: url(../images/icon-play.svg);
+    background-position-y: -3px;
 }
 
 section#study{
     background-color: var(--color-light-red);
+    background-image: url(../images/icon-study.svg);
+    background-position-y: -10px;
 }
 
 section#exercise{
     background-color: var(--color-lime-green);
+    background-image: url(../images/icon-exercise.svg);
 }
 
 section#social{
     background-color: var(--color-violet);
+    background-image: url(../images/icon-social.svg);
+    background-position-y: -12px;
 }
 
 section#self-care{
     background-color: var(--color-yellow);
+    background-image: url(../images/icon-self-care.svg);
+    background-position-y: -10px;
 }
 
 /* Footer config */
