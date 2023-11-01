@@ -143,16 +143,47 @@ section.activity > div.content:hover{
     background-color: var(--color-desaturated-blue);
 }
 
-section.activity > div.content > button{
+section.activity > div.content > div.content-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+section.activity > div.content > div.content-title > h1{
+    font-size: 1em;
+    margin: 10px;
+    font-weight: var(--font-weight-normal);
+}
+
+section.activity > div.content > div.content-title > button{
     background-color: transparent;
     border: none;
     cursor: pointer;
     width: 40px;
     height: 40px;
+    margin-right: 1px;
 }
 
-section.activity > div.content > button:hover > svg > path{
+section.activity > div.content > div.content-title > button:hover > svg > path{
     fill: #ffffff;
+}
+
+section.activity > div.content > div.content-timer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.activity > div.content > div.content-timer > p.current{
+    margin-left: 10px;
+    font-size: 2em;
+    font-weight: var(--font-weight-light);
+}
+
+section.activity > div.content > div.content-timer > p.previous{
+    margin-right: 10px;
+    color: var(--color-pale-blue);
 }
 
 section#work{
