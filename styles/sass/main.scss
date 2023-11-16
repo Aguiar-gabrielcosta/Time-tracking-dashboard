@@ -1,0 +1,212 @@
+// Mixins
+@mixin activity-background ($bg-color, $icon, $icon-position-y){
+    background-color: $bg-color;
+    background-image: url($icon);
+    background-position-y: $icon-position-y;
+}
+
+// General config
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: $color0;
+    font-family: $main-font;
+}
+
+body{
+    background-color: $color-soft-blue;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-very-dark-blue;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    gap: 25px;
+    margin: 20px;
+
+    section{
+        border-radius: 15px;
+    }
+
+    #work{
+        @include activity-background($color-light-orange, "../../images/icon-work.svg", -10px);
+    }
+    
+    #play{
+        @include activity-background($color-soft-blue, "../../images/icon-play.svg", -3px);
+    }
+    
+    #study{
+        @include activity-background($color-light-red, "../../images/icon-study.svg", -10px);
+    }
+    
+    #exercise{
+        @include activity-background($color-lime-green, "../../images/icon-exercise.svg", 0px);
+    }
+    
+    #social{
+        @include activity-background($color-violet, "../../images/icon-social.svg", -12px);
+    }
+    
+    #self-care{
+        @include activity-background($color-yellow, "../../images/icon-self-care.svg", -10px);
+    }
+}
+
+.profile{
+    background-color: $color-dark-blue;
+    width: 330px;
+    height: 200px;
+
+    div{
+        background-color: $color-blue;
+        border-radius: 15px;
+        height: 130px;
+        padding: 10px;
+        img {
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 70px;
+            border: 2px solid $color0;
+            border-radius: 50%;
+        }
+
+        h1, p{
+            display: inline-block;
+        }
+
+        h1 {
+            font-weight: $font-weight-light;
+            font-size: 1em;
+            color: $color-pale-blue;
+            margin: 30px 0px 0px 20px;
+        }
+
+        p{
+            font-weight: $font-weight-light;
+            font-size: 1.4em;
+            margin: 5px 0px 0px 20px;
+        }
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        padding: 10px;
+
+        input{
+            display: none;
+        }
+
+        label{
+            color: $color-desaturated-blue;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        input:checked + label, input:hover + label:hover{
+            color: $color0;
+        }
+    }
+}
+
+
+.activity {
+    display: flex;
+    align-items: end;
+    width: 330px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+
+    .content{
+        background-color: $color-dark-blue;
+        border-radius: 15px;
+        width: 100%;
+        height: 120px;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color-desaturated-blue;
+        }
+
+        .content-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 10px;
+
+            h1{
+                font-size: 1em;
+                margin: 10px;
+                font-weight: $font-weight-bold;
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                margin-right: 1px;
+
+                &:hover > svg > path{
+                    fill: $color0;
+                }
+            }
+        }
+
+        .content-timer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .current{
+                margin-left: 10px;
+                font-size: 2em;
+                font-weight: $font-weight-light;
+            }
+
+            .previous{
+                margin-right: 10px;
+                color: $color-pale-blue;
+            }
+        }
+    }
+}
+
+
+// Footer config
+.attribution {
+    margin: 50px 0px;
+    font-size: 12px; 
+    text-align: center;
+    
+    a {
+        color: $color-soft-blue;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
