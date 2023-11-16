@@ -10,64 +10,64 @@
         grid-template-columns: auto auto auto auto;
         grid-template-rows: auto auto;
         gap: 30px;
-    }
 
-    .container > section{
-        width: 255px;
-    }
+        section{
+            width: 255px;
+        }
 
-    .container > section.profile{
-        grid-row-start: 1;
-        grid-row-end: 3;
-        height: 520px;
-    }
+        .profile{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            height: 520px;
 
-    .container > section.profile > div{
-        height: 355px;
-    }
+            div{
+                height: 355px;
 
-    .container > section.profile > div > img{
-        display: block;
-        float: none;
-        width: 85px;
-    }
+                img {
+                    display: block;
+                    float: none;
+                    width: 85px;
+                }
 
-    .container > section.profile > div > h1{
-        margin-top: 40px;
-    }
+                h1{
+                    margin-top: 40px;
+                }
 
-    .container > section.profile > div > p{
-        font-size: 2.5em;
-    }
+                p {
+                    font-size: 2.5em;
+                }
+            }
 
-    .container > section.profile > nav{
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        margin-left: 20px;
-        height: 165px;
-    }
+            nav{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                margin-left: 20px;
+                height: 165px;
+            }
+        }
 
-    .container > section.activity{
-        height: 245px;
-    }
+        .activity{
+            height: 245px;
+            
+            .content{
+                height: 200px;
 
-    .container > section.activity > div.content{
-        height: 200px;
-    }
+                .content-timer{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    margin-top: 15px;
 
-    .container > section.activity > div.content > div.content-timer{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 15px;
-    }
+                    .current{
+                        font-size: 3.5em;
+                    }
 
-    .container > section.activity > div.content > div.content-timer > p.current{
-        font-size: 3.5em;
-    }
-
-    .container > section.activity > div.content > div.content-timer > p.previous{
-        margin-left: 10px;
+                    .previous{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }
