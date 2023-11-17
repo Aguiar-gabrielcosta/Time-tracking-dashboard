@@ -1,17 +1,13 @@
-import getData from "./getAPIData.mjs";
+import { TimeMenu } from "./timeMenu.mjs";
 
-document.getElementById('daily').addEventListener('click', dailyHours)
-document.getElementById("weekly").addEventListener('click', weeklyHours)
-document.getElementById("monthly").addEventListener('click', monthlyHours)
 
-function dailyHours(){
-    
-}
+// Start condition
+TimeMenu.dailyHours()
 
-function weeklyHours(){
 
-}
 
-function monthlyHours(){
+// Listeners
+document.querySelector('input#daily').addEventListener('change', TimeMenu.dailyHours)
+document.querySelector('input#weekly').addEventListener('change', TimeMenu.weeklyHours)
+document.querySelector('input#monthly').addEventListener('change', TimeMenu.monthlyHours)
 
-}
