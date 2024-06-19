@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://aguiar-gabrielcosta.github.io/Time-tracking-dashboard/)
+- Solution URL: [Time-tracking-dashboard](https://aguiar-gabrielcosta.github.io/Time-tracking-dashboard/)
 
 ## My process
 
